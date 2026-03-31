@@ -49,7 +49,7 @@ export const productApi = createApi({
         data: body,
       }),
 
-      async onQueryStarted(arg, { dispatch, queryFulfilled }) {
+      async onQueryStarted(_arg, { dispatch, queryFulfilled }) {
         try {
           const { data: newProduct } = await queryFulfilled;
 
